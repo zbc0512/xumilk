@@ -1,5 +1,4 @@
 .settings/
-target/classes/
-target/test-classes/
+target/
 .classpath
 .project
