@@ -4,14 +4,14 @@
 <html>
 <head>
 <%@ include file="/WEB-INF/jsp/common/js.jsp"%>
-<title>徐姊妹牛奶-放心喝的牛奶</title>
+<title>Download</title>
 </head>
 <body>
   <%@ include file="/WEB-INF/jsp/common/nav.jsp"%>
   <section class="content-wrap">
     <div class="container" align="center">
       <div class="row">
-        <h3>Welcome to Prpall!</h3>
+        <h3>联系我们!</h3>
       </div>
     </div>
   </section>

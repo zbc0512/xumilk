@@ -2,11 +2,11 @@
 <!doctype html>
 <html>
 <head>
-<%@ include file="/WEB-INF/jsp/js.jsp" %>
+<%@ include file="/WEB-INF/jsp/common/js.jsp" %>
 <title>Snake</title>
 </head>
 <body>
-  <%@ include file="/WEB-INF/jsp/nav.jsp" %>
+  <%@ include file="/WEB-INF/jsp/common/nav.jsp" %>
   <section class="content-wrap">
     <div class="container" align="center">
       <div class="row">
@@ -58,6 +58,6 @@
       </div>
     </div>
   </section>
-  <%@ include file="/WEB-INF/jsp/footer.jsp" %>
+  <%@ include file="/WEB-INF/jsp/common/footer.jsp" %>
 </body>
 </html>

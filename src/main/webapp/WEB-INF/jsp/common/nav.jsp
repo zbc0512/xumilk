@@ -25,8 +25,8 @@
           </div>
           <button type="submit" class="btn btn-default">搜索</button>
         </form>
-          <li><a href="/user.do?method=signup">注册</a></li>
-          <li><a href="/user.do?method=signin">登录</a></li>
+          <li><a href="/join">注册</a></li>
+          <li><a href="/login">登录</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
               aria-haspopup="true" aria-expanded="false">个人中心<span class="caret"></span>
@@ -35,7 +35,7 @@
               <li><a href="/user.do?method=user">个人信息</a></li>
               <li><a href="/user.do?method=user">我的订单</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="/user.do?method=signout">退出</a></li>
+              <li><a href="/logout">退出</a></li>
             </ul>
           </li>
         </ul>
