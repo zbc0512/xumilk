@@ -4,10 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HelloController {
+public class ContactUsController {
 
-    @RequestMapping("/hello")
-    public String hello() {
-        return "hello";
+    @RequestMapping("/contactus")
+    public String order() {
+
+        return "contactus";
     }
 }
