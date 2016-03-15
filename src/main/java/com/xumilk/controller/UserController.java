@@ -1,11 +1,11 @@
-package com.xuzimei.controller;
+package com.xumilk.controller;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.xuzimei.entity.User;
+import com.xumilk.entity.User;
 
 @Controller
 public class UserController {

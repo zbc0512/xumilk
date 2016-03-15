@@ -1,4 +1,4 @@
-package com.xuzimei.interceptor;
+package com.xumilk.interceptor;
 
 import java.io.Writer;
 
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.xuzimei.entity.User;
+import com.xumilk.entity.User;
 
 public class LoginInterceptor implements HandlerInterceptor {
 

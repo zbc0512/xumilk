@@ -1,4 +1,4 @@
-package com.xuzimei.entity;
+package com.xumilk.entity;
 
 public class User {
 
