@@ -6,7 +6,7 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <!-- Bootstrap -->
-<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,6 +15,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/static/bootstrap/js/jquery-1.11.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/jquery-1.11.3.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
