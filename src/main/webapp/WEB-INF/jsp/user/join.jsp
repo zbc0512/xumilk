@@ -1,10 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-  pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <%@ include file="/WEB-INF/jsp/common/js.jsp"%>
-<title>Sign up</title>
+<title>注册</title>
 </head>
 <body>
   <%@ include file="/WEB-INF/jsp/common/nav.jsp"%>

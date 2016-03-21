@@ -3,7 +3,7 @@
 <html>
 <head>
 <%@ include file="/WEB-INF/jsp/common/js.jsp"%>
-<title>Sign in</title>
+<title>登录</title>
 </head>
 <body>
   <%@ include file="/WEB-INF/jsp/common/nav.jsp"%>
