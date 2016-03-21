@@ -32,7 +32,7 @@
           </a>
             <ul class="dropdown-menu">
               <li><a href="${pageContext.request.contextPath}/user.do?method=user">个人信息</a></li>
-              <li><a href="${pageContext.request.contextPath}/user.do?method=user">我的订单</a></li>
+              <li><a href="${pageContext.request.contextPath}/order">我的订单</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="${pageContext.request.contextPath}/logout">退出</a></li>
             </ul></li>
