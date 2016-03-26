@@ -25,9 +25,9 @@
             </div>
             <button type="submit" class="btn btn-default">搜索</button>
           </form>
-          <li><a href="${pageContext.request.contextPath}/join">注册</a></li>
-          <li><a href="${pageContext.request.contextPath}/login">登录</a></li>
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+          <li id="join"><a href="${pageContext.request.contextPath}/join">注册</a></li>
+          <li id="login"><a href="${pageContext.request.contextPath}/login">登录</a></li>
+          <li id="profile" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
             aria-haspopup="true" aria-expanded="false">个人中心<span class="caret"></span>
           </a>
             <ul class="dropdown-menu">
