@@ -15,7 +15,7 @@
             <div style="text-align: left; font-weight: lighter;">
               <label for="userName"><font style="font-weight: normal; color: #666;">用户名：</font></label>
             </div>
-            <input type="text" class="form-control" id="userName" name="userName" placeholder="用户名/邮箱/手机号">
+            <input type="text" class="form-control" id="userName" name="userName" onblur="checkUserName()" placeholder="用户名/邮箱/手机号">
           </div>
           <div class="form-group">
             <div style="text-align: left">
