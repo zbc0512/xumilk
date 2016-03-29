@@ -18,3 +18,22 @@
 <script src="${pageContext.request.contextPath}/static/bootstrap/js/jquery-1.11.3.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		document.getElementById("join").style.display = "none";
+		//document.getElementById("login").style.display = "none";
+		document.getElementById("profile").style.display = "none";
+	});
+	function checkUserName() {
+		var xmlhttp;
+		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {// code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		var userName = document.getElementById("userName").value;
+		xmlhttp.open("GET", "${pageContext.request.contextPath}/checkUserName",
+				true);
+		xmlhttp.send();
+	}
+</script>
