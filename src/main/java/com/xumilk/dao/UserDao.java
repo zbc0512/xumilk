@@ -7,23 +7,23 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.xumilk.model.XUser;
+import com.xumilk.model.User;
 
 public class UserDao {
-    String resource = "config/mybatis/mybatis-config.xml";
-    InputStream inputStream = Resources.getResourceAsStream(resource);
-    SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-    SqlSessionFactory factory = builder.build(inputStream);
-    SqlSession session = factory.openSession();
-    try
-    {
-        UserMapper mapper = session.getMapper(BlogMapper.class);
-        XUser xUser = mapper.selectBlog(101);
-    }catch(Exception e)
-    {
+    public User getUserByName(String userName) {
+        String resource = "config/mybatis/mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+        SqlSessionFactory factory = builder.build(inputStream);
+        SqlSession session = factory.openSession();
+        try {
+            session = factory.openSession();
+            UserMapper mapper = session.getMapper(UserMapper.class);
+            User user = mapper.selectBlog(101);
+        } catch (Exception e) {
 
-    }finally
-    {
-        session.close();
+        } finally {
+            session.close();
+        }
     }
 }

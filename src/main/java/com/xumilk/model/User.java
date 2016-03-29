@@ -1,6 +1,6 @@
 package com.xumilk.model;
 
-public class XUser {
+public class User {
 
     /** 用户ID */
     private Integer userId;

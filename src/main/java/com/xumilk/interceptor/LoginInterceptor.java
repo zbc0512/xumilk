@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.xumilk.model.XUser;
+import com.xumilk.model.User;
 
 public class LoginInterceptor implements HandlerInterceptor {
 
@@ -25,8 +25,8 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
             Object object) throws Exception {
         System.out.println("preHandle");
-        XUser xUser = (XUser) request.getSession().getAttribute("user");
-        if (xUser == null) {
+        User user = (User) request.getSession().getAttribute("user");
+        if (user == null) {
             String result = "{\"success\":false,\"message\":\"用户未登录\"}";
             response.setCharacterEncoding("utf8");
             response.setContentType("application/json,charset=utf-8");
