@@ -25,15 +25,31 @@
 		document.getElementById("profile").style.display = "none";
 	});
 	function checkUserName() {
-		var xmlhttp;
+		var xmlHttp;
 		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
+			xmlHttp = new XMLHttpRequest();
 		} else {// code for IE6, IE5
-			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
 		}
 		var userName = document.getElementById("userName").value;
-		xmlhttp.open("GET", "${pageContext.request.contextPath}/checkUserName",
-				true);
-		xmlhttp.send();
+		if (userName != null) {
+			xmlHttp.open("GET",
+					"${pageContext.request.contextPath}/checkUserName?userName="
+							+ userName, true);
+			xmlHttp.onreadystatechange = function() {
+				if (xmlHttp.readyState == 4) {
+					if (xmlHttp.status == 200) {
+						if (xmlHttp.responseText == "true") {
+							alert("用户名不可用");
+						} else {
+							alert("用户名可用");
+						}
+					} else {
+						alert("请求失败，错误码：" + xmlHttp.status);
+					}
+				}
+			};
+			xmlHttp.send();
+		}
 	}
 </script>
