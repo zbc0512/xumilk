@@ -20,7 +20,7 @@
 <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
-		document.getElementById("join").style.display = "none";
+		//document.getElementById("join").style.display = "none";
 		//document.getElementById("login").style.display = "none";
 		document.getElementById("profile").style.display = "none";
 	});
@@ -32,7 +32,7 @@
 			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
 		}
 		var userName = document.getElementById("userName").value;
-		if (userName != null) {
+		if (userName != null && userName != "") {
 			xmlHttp.open("GET",
 					"${pageContext.request.contextPath}/checkUserName?userName="
 							+ userName, true);
