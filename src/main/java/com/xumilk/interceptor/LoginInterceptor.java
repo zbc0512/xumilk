@@ -32,7 +32,8 @@ public class LoginInterceptor implements HandlerInterceptor {
             response.setContentType("application/json,charset=utf-8");
             Writer out = response.getWriter();
             out.write(result);
-            return true;
+            request.getRequestDispatcher("/login").forward(request, response);
+            return false;
         } else {
             return true;
         }
