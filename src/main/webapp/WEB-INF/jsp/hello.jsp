@@ -10,7 +10,7 @@
   <section class="content-wrap">
     <div class="container" align="center">
       <div class="row">
-        <h3>Hello World!</h3>
+        <h3>登录成功！</h3>
       </div>
     </div>
   </section>

@@ -28,7 +28,14 @@ public class UserController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login_do(User user, HttpServletRequest request) {
         String userName = request.getParameter("userName");
-        String userPasswd = request.getParameter("userPasswd");
+        String password = request.getParameter("password");
+        UserDao userDao = new UserDao();
+        user = userDao.getUserByName(request.getParameter("userName"));
+        HttpSession session = request.getSession();
+        if (password.equals(user.getPassword())) {
+            session.setAttribute("user", user);
+            return "hello";
+        }
         return "user/login";
     }
 
