@@ -20,9 +20,12 @@
 <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
-		//document.getElementById("join").style.display = "none";
-		//document.getElementById("login").style.display = "none";
-		document.getElementById("profile").style.display = "none";
+		if('<%=session.getAttribute("user")%>' != 'null'){
+            document.getElementById("join").style.display = "none";
+            document.getElementById("login").style.display = "none";
+		}else{
+            document.getElementById("profile").style.display = "none";
+		}
 	});
 	function checkUserName() {
 		var xmlHttp;

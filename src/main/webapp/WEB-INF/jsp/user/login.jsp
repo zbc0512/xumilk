@@ -10,6 +10,7 @@
   <section class="content-wrap">
     <div class="container" align="center">
       <div class="row">
+        <span>请登录</span>
         <form action="${pageContext.request.contextPath}/login" method="post" class="form-horizontal" style="width: 20%">
           <div class="form-group">
             <div style="text-align: left;">
