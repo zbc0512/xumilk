@@ -10,7 +10,7 @@
   <section class="content-wrap">
     <div class="container" align="center">
       <div class="row">
-        <h3>注销！</h3>
+        <h3>已退出登录</h3>
       </div>
     </div>
   </section>

@@ -24,7 +24,6 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
             Object object) throws Exception {
-        System.out.println("preHandle");
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             String result = "{\"success\":false,\"message\":\"用户未登录\"}";

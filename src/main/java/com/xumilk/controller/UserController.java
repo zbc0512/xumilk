@@ -30,7 +30,7 @@ public class UserController {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
         UserDao userDao = new UserDao();
-        user = userDao.getUserByName(request.getParameter("userName"));
+        user = userDao.getUserByName(userName);
         HttpSession session = request.getSession();
         if (password.equals(user.getPassword())) {
             session.setAttribute("user", user);
@@ -41,16 +41,14 @@ public class UserController {
 
     @RequestMapping("/logout")
     public String logout(User user, HttpSession session) {
-
+        session.invalidate();
         return "user/logout";
     }
 
     @RequestMapping(value = "/checkUserName")
     public String checkUserName(User user, HttpServletRequest request, HttpServletResponse response) {
-        System.out.println(request.getParameter("userName"));
         UserDao userDao = new UserDao();
         user = userDao.getUserByName(request.getParameter("userName"));
-        System.out.println(user.getUserName());
         if (user.getUserName() != null && request.getParameter("userName").equals(user.getUserName())) {
             return "user/login";
         }
