@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,9 +15,26 @@ import com.xumilk.model.User;
 @Controller
 public class UserController {
 
+    @Autowired
+    private UserDao userDao;
+
     @RequestMapping("/join")
     public String join(User user, HttpSession session) {
 
+        return "user/join";
+    }
+
+    @RequestMapping(value = "/join", method = RequestMethod.POST)
+    public String join_do(User user, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String rePassword = request.getParameter("rePassword");
+        user.setUserName(request.getParameter("userName"));
+        user.setPassword(request.getParameter("password"));
+        String result = userDao.addUser(user);
+        if ("done".equals(result)) {
+            session.setAttribute("user", user);
+            return "hello";
+        }
         return "user/join";
     }
 
@@ -45,7 +63,7 @@ public class UserController {
         return "user/logout";
     }
 
-    @RequestMapping(value = "/checkUserName")
+    @RequestMapping(value = "/checkUserName", method = RequestMethod.GET)
     public String checkUserName(User user, HttpServletRequest request, HttpServletResponse response) {
         UserDao userDao = new UserDao();
         user = userDao.getUserByName(request.getParameter("userName"));
