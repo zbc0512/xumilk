@@ -15,8 +15,8 @@ import com.xumilk.model.User;
 @Controller
 public class UserController {
 
-    @Autowired
-    private UserDao userDao;
+    //@Autowired
+    //private UserDao userDao;
 
     @RequestMapping("/join")
     public String join(User user, HttpSession session) {
@@ -30,6 +30,7 @@ public class UserController {
         String rePassword = request.getParameter("rePassword");
         user.setUserName(request.getParameter("userName"));
         user.setPassword(request.getParameter("password"));
+        UserDao userDao = new UserDao();
         String result = userDao.addUser(user);
         if ("done".equals(result)) {
             session.setAttribute("user", user);
