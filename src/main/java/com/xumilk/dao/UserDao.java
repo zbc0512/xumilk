@@ -11,7 +11,7 @@ public class UserDao {
         SqlSession sqlSession = null;
         User user = null;
         try {
-            sqlSession = DbUtil.getSqlSession("config/mybatis/mybatis-config.xml");
+            sqlSession = DbUtil.getSqlSession("mybatis/mybatis-config.xml");
             user = sqlSession.selectOne("userMapper.getUser", userName);
         } catch (Exception e) {
             e.printStackTrace();
@@ -26,7 +26,7 @@ public class UserDao {
     public String addUser(User user) {
         SqlSession sqlSession = null;
         try {
-            sqlSession = DbUtil.getSqlSession("config/mybatis/mybatis-config.xml");
+            sqlSession = DbUtil.getSqlSession("mybatis/mybatis-config.xml");
             int result = sqlSession.selectOne("userMapper.addUser", user);
         } catch (Exception e) {
             e.printStackTrace();
