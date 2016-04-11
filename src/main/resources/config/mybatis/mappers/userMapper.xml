@@ -5,10 +5,10 @@
 <mapper namespace="userMapper">
   <!-- 查询用户(Select) -->
   <select id="getUser" parameterType="String" resultType="com.xumilk.model.User">
-    select * from user where userName = #{userName}
+    select * from xu_user where user_name = #{userName}
   </select>
   <!-- 创建用户(Create) -->
   <insert id="addUser" parameterType="com.xumilk.model.User">
-    insert into user (userName,password) values(#{userName},#{password})
+    insert into xu_user (user_name,password) values(#{userName},#{password})
   </insert>
 </mapper>
