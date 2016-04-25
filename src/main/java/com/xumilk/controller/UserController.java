@@ -51,7 +51,7 @@ public class UserController {
         UserDao userDao = new UserDao();
         user = userDao.getUserByName(userName);
         HttpSession session = request.getSession();
-        if (password.equals(user.getPassword())) {
+        if (user != null && password.equals(user.getPassword())) {
             session.setAttribute("user", user);
             return "hello";
         }
